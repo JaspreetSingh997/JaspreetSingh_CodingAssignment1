@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Tests</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <section id="lab" class="labTestContainer">
+        <div class="labContainer">
+            <form action="" class="labForm">
+                <div class="contactDetails">
+                    <h3>1. Your Contact Details</h3>
+                    <input type="text" name="fname" placeholder="Full Name">
+                    <input type="text" name="pid" placeholder="Patient ID if Exist">
+                    <input type="text" name="phone" placeholder="Contact Number">
+                    <input type="text" name="email" placeholder="Email Address">
+                </div>
+                <div class="address">
+                    <h3>2. Address</h3>
+                    <input type="text" name="hno" placeholder="House No.">
+                    <input type="text" name="street" placeholder="Street">
+                    <input type="text" name="area" placeholder="Area">
+                    <label for="district">District</label>
+                    <select name="district" id="district">
+                        <option value="" hidden>Choose</option>
+                        <option value="amritsar">Amritsar</option>
+                        <option value="amritsar">Jalandhar</option>
+                        <option value="amritsar">Ludhiana</option>
+                        <option value="amritsar">Patiala</option>
+                        <option value="amritsar">Sangrur</option>
+                    </select>
+                </div>
+                <div class="testType">
+                    <h3>3. Choose the Test Type (Check atleast one box without fail)</h3>
+                    <input type="checkbox" id="cbc" name="test1" value="CBC">
+                    <label for="cbc">CBC</label><br>
+                    <input type="checkbox" id="urine" name="test2" value="urine">
+                    <label for="urine">Complete Urine</label><br>
+                    <input type="checkbox" id="lipid" name="test3" value="lipid">
+                    <label for="lipid">Lipid Profile</label><br>
+                    <input type="checkbox" id="typhoid" name="test4" value="typhoid">
+                    <label for="thphoid">Thyroid Stimulating Hormone(TSH)</label><br>
+                    <input type="checkbox" id="glucose" name="test5" value="glucose">
+                    <label for="glucose">Glucose Test</label><br>
+                </div>
+                <div class="hardCopy">
+                    <h3>Do you want a hard copy of the report also?</h3>
+                    <input type="radio" id="yes" name="copy" value="yes">
+                    <label for="yes">Yes</label>
+                    <input type="radio" id="no" name="copy" value="no">
+                    <label for="no">No</label>
+                </div>
+                <div class="dateTime">
+                    <h3>Select Your Comfortable Date and Time</h3>
+                    <input type="date" name="date" id="date" placeholder="Select Date">
+                    <input type="time" name="time" id="time" placeholder="Select Time">
+                </div>
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+                
+            </form>
+            <div class="rightPanel"></div>
+        </div>
+    </section>
+    
+</body>
+</html>

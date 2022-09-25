@@ -1,0 +1,447 @@
+@import url("https://fonts.googleapis.com/css2?family=Alice&family=Bree+Serif&family=Josefin+Sans&family=K2D&family=Open+Sans&family=Poppins&family=Roboto&family=Tangerine:wght@400;700&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'K2D', sans-serif;
+    box-sizing: border-box;
+}
+
+#home {
+    width: 100%;
+}
+
+#home .pharmacyHeader {
+    background: #585858;
+}
+
+#home .pharmacyHeader h1 {
+    padding: 10px 15px;
+    margin: 0 0 0 20px;
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+}
+
+/* STYLING NAVBAR */
+
+.navbar {
+    width: 100%;
+    background: rgba(0,0,0,0.6);
+    position: sticky;
+    top: 0;
+    z-index: 3;
+    
+}
+
+.navbar .nav {
+    display: flex;
+    padding: 10px 15px;
+}
+
+.navbar .nav li {
+    list-style: none;
+    margin: 0 0 0 20px;
+}
+
+.navbar .nav li a {
+    text-decoration: none;
+    color: #fff;
+}
+.medicinesDropDown, .healthCareDropDown {
+    background: #ccc;
+    display: none;
+    position: absolute;
+    margin-left: 0;
+}
+
+.medicinesDropDown li, .healthCareDropDown li {
+    position: relative;
+    left: 0;
+    margin: 0 !important;
+    padding: 10px 15px;
+}
+
+.medicinesDropDown li a, .healthCareDropDown li a {
+    color: blue !important;
+}
+
+.medicinesDropDown li:hover > a, .healthCareDropDown li:hover > a {
+    color: #fff !important;
+}
+
+.medicinesDropDown li:hover,
+.healthCareDropDown li:hover {
+    background: #222;
+}
+
+.medicines:hover > .medicinesDropDown,
+.healthcare:hover > .healthCareDropDown {
+    display: block;
+    transition: 450ms ease-in-out;
+}
+
+/* ADVERTISEMENT */
+
+.mainContainer {
+    width: 100%;
+}
+
+.advertisementsContent {
+    height: 70vh;
+    width: 100%;
+}
+
+.adBanner {
+    width: 100%;
+    height: 70vh;
+    border: 2px solid steelblue;
+    transition: .3s ease-in-out;
+    animation: adBannerAnim 10s ease-in-out infinite;
+}
+
+@keyframes adBannerAnim {
+    0%
+    {
+        background: url('../Images/Animation/ani1.jpg') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    25%
+    {
+        background: url('../Images/Animation/ani2.png') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    50%
+    {
+        background: url('../Images/Animation/ani3.jpg') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    75%
+    {
+        background: url('../Images/Animation/ani4.jpg') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;
+    }
+
+    100%
+    {
+        background: url('../Images/Animation/ani5.jpg') no-repeat;
+        background-size: 100% 100%;
+        background-position: center;    
+    }
+}
+
+.covidCare {
+    padding: 20px;
+}
+
+.covidCareCards {
+    padding: 10px;
+}
+
+.flexContainer
+{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2%;
+}
+
+.flexContainer .flexContent {
+    border-radius: 6px;
+    background-color: #fff;
+    box-shadow: 0px 4px 7px 0px rgb(0 0 0 / 11%);
+    padding: 0;
+    margin: 10px;
+    overflow: hidden;
+    position: relative;
+    outline: none;
+    width: 22%;
+    transition: .3s ease-in;
+}
+
+.flexContainer .flexContent .product-container .product-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 35px;
+    min-height: 274px;
+}
+
+.flexContainer .flexContent .product-container .product-info {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px 15px 0;
+    min-height: 108px;
+}
+
+.flexContainer .flexContent .product-container .product-info::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    width: 108px;
+    height: 115px;
+    background: url('../Images/priceCircle.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.flexContainer .flexContent .product-container .product-img img {
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    max-height: 180px;
+    transition: .3s ease-in;
+}
+
+.flexContainer .flexContent .product-container .product-img img:hover {
+    transform: translateY(-20px);
+    transition: .3s ease-out;
+}
+
+.flexContainer .flexContent .product-container .product-info .left {
+    width: 33%;
+    margin-left: 5%;
+    position: relative;
+    z-index: 2;
+    right: -6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.flexContainer .flexContent .product-container .product-info .left .product-price {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+}
+
+.flexContainer .flexContent .product-container .product-info .left .price {
+    font-style: normal;
+    font-weight: 600;
+    color: #f18904;
+    font-size: 28px;
+    margin-bottom: 0;
+    line-height: 1;
+    position: relative;
+    right: -10px;
+    top: 8px;
+}
+
+.flexContainer .flexContent .product-container .product-info .left .price .oldPrice {
+    color: #9a9a98;
+    left: 0;
+    top: -14px;
+}
+
+.flexContainer .flexContent .product-container .product-info .left .price span {
+    font-size: 12px !important;
+    letter-spacing: normal;
+    font-weight: normal;
+    position: relative;
+    left: -18px;
+    top: 0px;
+}
+
+
+/* RIGHT */
+
+.flexContainer .flexContent .product-container .product-info .right {
+    width: 65%;
+    position: relative;
+    z-index: 2;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.flexContainer .flexContent .product-container .product-info .right .excerpt {
+    font-style: normal;
+    font-weight: normal;
+    margin-bottom: 4px;
+    display: -webkit-box;
+    --webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flexContainer .flexContent .product-container .product-info .right .excerpt a {
+    text-decoration: none;
+    color: #000;
+}
+
+.line-crop {
+    -webkit-box-orient: vertical;
+    -moz-box-orient: vertical;
+    box-orient: vertical;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.flexContainer .flexContent .addToCart {
+    position: absolute;
+    bottom: 20px;
+    
+    cursor: pointer;
+}
+
+.flexContainer .flexContent .addToCart a {
+    padding: 10px 15px;
+    margin: 0 0 10px 15px;
+    text-decoration: none;
+    background: #f18904;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 5px #f18904;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+.flexContainer .flexContent .addToCart a:hover {
+    transition: .3s ease-in-out;
+    background: #f18904;
+}
+
+.diabetesCare {
+    padding: 20px;
+}
+
+.diabetesCareCards {
+    padding: 10px;
+}
+
+/*  FOOTER */
+
+.pharmacyFooter {
+    background: #191919;
+}
+
+.pharmacyFooter p {
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+
+/* LAB TESTS */
+
+#lab {
+    width: 100%;
+    height: 90vh;
+}
+
+.labContainer {
+    width: 90%;
+    margin: 2rem auto;
+    box-shadow: 0 0 10px #000;
+    height: 90vh;
+    border-radius: 5px;
+    display: flex;
+}
+
+.labForm {
+    width: 50%;
+    overflow: scroll;
+}
+
+.labForm::-webkit-scrollbar {
+    width: 0px;
+}
+.rightPanel {
+    width: 50%;
+    background: url('../Images/Lab-Test/lab-test.jpg');
+    background-size: 100% 100%;
+    background-position: center;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}
+
+.contactDetails, .address, .testType, .hardCopy, .dateTime {
+    padding: 20px;
+}
+
+.contactDetails input, .address input, .testType input, .hardCopy input, .dateTime input {
+    cursor: pointer;
+}
+.contactDetails input {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid #acacac;
+    width: 40%;
+    margin: 20px 0 0 10px;
+}
+
+.address input {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid #acacac;
+    width: 40%;
+    margin: 20px 0 0 10px;
+}
+
+.address label {
+    color: #acacac;
+    margin: 0 0 0 20px;
+    font-weight: 300;
+}
+
+.address select {
+    padding: 10px 15px;
+}
+
+
+.testType input {
+    margin: 10px 15px;
+}
+
+.hardCopy input {
+    margin: 10px 15px;
+}
+
+.dateTime input {
+    background: none;
+    border: none;
+    padding: 10px 15px;
+    border-bottom: 1px solid #acacac;
+    width: 40%;
+    margin: 20px 0 0 10px;
+}
+
+input[type=submit], input[type=reset] {
+    background: none;
+    border: none;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px 15px;
+    margin: 0 0 0 15px;
+    transition: .3s ease-in-out;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background: #f18904;
+    box-shadow: 0 0 5px #f18904;
+    border: 1px solid #f18904;
+    transition: .3s ease-in-out;
+    color: #fff;
+}
